@@ -1,0 +1,105 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">EasyHR</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/login">Back</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/dipendente">Orario</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="card mt-4">
+    <div class="card-header text-white">
+      <h2>Richiesta Ferie</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="addRequest('ferie')">
+        <div class="form-group">
+          <label class="form-label">Data Inizio:</label>
+          <input type="date" class="form-control" [(ngModel)]="dataInizioFerie" name="dataInizioFerie" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Data Fine:</label>
+          <input type="date" class="form-control" [(ngModel)]="dataFineFerie" name="dataFineFerie" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Motivo:</label>
+          <input type="text" class="form-control" [(ngModel)]="motivoFerie" name="motivoFerie" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Aggiungi Richiesta Ferie</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- <div class="card mt-4">
+    <div class="card-header text-white">
+      <h2>Elenco Richieste Ferie</h2>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let ferie of ferieList">
+        <strong>Data Inizio:</strong> {{ ferie.dataInizio | date }}, 
+        <strong>Data Fine:</strong> {{ ferie.dataFine | date }}, 
+        <strong>Motivo:</strong> {{ ferie.motivo }}
+      </li>
+      <li class="list-group-item text-muted" *ngIf="ferieList.length === 0">Nessuna richiesta di ferie trovata.</li>
+    </ul>
+  </div> -->
+
+  <div class="container mt-5">
+    <div class="card mt-4">
+      <div class="card-header text-white">
+        <h2>Richiesta Permessi</h2>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="addRequest('permessi')">
+          <div class="form-group">
+            <label class="form-label">Data Inizio:</label>
+            <input type="date" class="form-control" [(ngModel)]="dataInizioPermessi" name="dataInizioPermessi" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Data Fine:</label>
+            <input type="date" class="form-control" [(ngModel)]="dataFinePermessi" name="dataFinePermessi" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Motivo:</label>
+            <input type="text" class="form-control" [(ngModel)]="motivoPermessi" name="motivoPermessi" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Aggiungi Richiesta Permessi</button>
+        </form>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- <div class="card mt-4">
+      <div class="card-header text-white">
+        <h2>Elenco Richieste Permessi</h2>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let permessi of permessiList">
+          <strong>Data Inizio:</strong> {{ permessi.dataInizio | date }}, 
+          <strong>Data Fine:</strong> {{ permessi.dataFine | date }}, 
+          <strong>Motivo:</strong> {{ permessi.motivo }}
+        </li>
+        <li class="list-group-item text-muted" *ngIf="permessiList.length === 0">Nessuna richiesta di permessi trovata.</li>
+      </ul>
+    </div>
+  </div> -->
+
+</div>

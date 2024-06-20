@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">EasyHR</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/login">Back</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/request">Richieste</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg-danger-subtle d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 56px); padding-top: 20px;">
+  <div class="container">
+    <h2 class="text-center text-dark mb-4">Benvenuto, Dipendente!</h2>
+    <div class="card p-4 shadow-lg">
+      <h2 class="card-header text-center text-light mb-4">Aggiorna Orari di Lavoro</h2>
+      <div class="card-body">
+        <form (ngSubmit)="updateWorkHours()">
+          <div class="mb-3">
+            <label for="userId" class="form-label">ID Utente:</label>
+            <input type="number" id="userId" [(ngModel)]="userId" name="userId" class="form-control" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="dataLavoro" class="form-label">Data:</label>
+            <input type="date" id="dataLavoro" [(ngModel)]="dataLavoro" name="dataLavoro" class="form-control" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="inizioOraLavoro" class="form-label">Inizio Ora Lavoro:</label>
+            <input type="time" id="inizioOraLavoro" [(ngModel)]="inizioOraLavoro" name="inizioOraLavoro" class="form-control" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="fineOraLavoro" class="form-label">Fine Ora Lavoro:</label>
+            <input type="time" id="fineOraLavoro" [(ngModel)]="fineOraLavoro" name="fineOraLavoro" class="form-control" required>
+          </div>
+          
+          <div *ngIf="aggiornatoMessage" class="alert alert-success mb-3">{{ aggiornatoMessage }}</div>
+          
+          <button type="submit" class="btn btn-primary w-100">Aggiorna Orari di Lavoro</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

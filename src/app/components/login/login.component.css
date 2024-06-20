@@ -1,0 +1,54 @@
+/* Reset di margini e padding */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Stile per il body */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Impedisce lo scrolling del body */
+    background-color: #f0d3ff !important; /* Colore lilla pastello */
+  }
+  
+  /* Stili per la navbar */
+  .navbar {
+    background-color: #910954 !important;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  /* Stili per la card */
+  .card {
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Stili per le etichette dei form */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Stili per i pulsanti */
+  .btn-primary {
+    background-color: #910954;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d177a9;
+    
+  }
+  
+  /* Altezza minima per la vista */
+  .min-vh-100 {
+    min-height: 100vh;
+  }
+  

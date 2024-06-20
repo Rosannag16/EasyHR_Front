@@ -1,0 +1,37 @@
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color:  #910954 !important;
+}
+
+.navbar-brand, .nav-link {
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background-color:  #910954;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color:  #910954;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #d177a9;
+}
