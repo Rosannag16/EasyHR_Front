@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private baseUrl = 'http://localhost:8080/auth';
+  private baseUrl = 'http://localhost:8080'; // Aggiusta la base URL secondo il tuo backend
 
   constructor(private http: HttpClient) { }
 
-  updateUserWorkHours(userId: number, workHours: any): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}/${userId}/work-hours`, workHours);
+  updateUserWorkHours(userId: number, updateData: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/auth/${userId}/workhours`, updateData);
   }
 }

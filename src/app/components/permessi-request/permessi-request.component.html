@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">EasyHR</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/dipendente">Orari</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/ferie">Ferie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/permessi">Permessi</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="card mb-4">
+    <div class="card-header text-white">
+      <h2>Submit Permessi Request</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="permessiForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="dataInizio" class="form-label">Data Inizio:</label>
+          <input id="dataInizio" formControlName="dataInizio" type="date" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="dataFine" class="form-label">Data Fine:</label>
+          <input id="dataFine" formControlName="dataFine" type="date" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="motivo" class="form-label">Motivo:</label>
+          <textarea id="motivo" formControlName="motivo" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Invia Richiesta</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header text-white">
+      <h2>Permessi Ricevuti</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let permesso of permessiList">
+            <td>{{ permesso.id }}</td>
+            <td>{{ permesso.dataInizio | date:'dd/MM/yyyy' }}</td>
+            <td>{{ permesso.dataFine | date:'dd/MM/yyyy' }}</td>
+            <td>{{ permesso.motivo }}</td>
+          </tr>
+          <tr *ngIf="permessiList.length === 0">
+            <td colspan="4" class="text-center">Nessun permesso trovato.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 export interface Ferie {
-    id: number;
-    dataInizio: string;
-    dataFine: string;
-    motivo: string;
+  id: number;
+  userId: number;
+  dataInizio: string; // Assicurati che la data sia rappresentata nel formato corretto
+  dataFine: string;
+  motivo: string;
   }

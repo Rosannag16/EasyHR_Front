@@ -1,6 +1,7 @@
 export interface Permessi {
-    id: number;
-    dataInizio: string;
-    dataFine: string;
-    motivo: string;
-  }
+  id: number;
+  userId: number;
+  dataInizio: string;
+  dataFine: string;
+  motivo: string;
+}

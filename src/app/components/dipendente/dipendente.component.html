@@ -11,12 +11,17 @@
           <a class="nav-link text-white" routerLink="/login">Back</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/request">Richieste</a>
+          <a class="nav-link text-white" routerLink="/ferie">Ferie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/permessi">Permessi</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+
 
 <div class="bg-danger-subtle d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 56px); padding-top: 20px;">
   <div class="container">
@@ -25,11 +30,6 @@
       <h2 class="card-header text-center text-light mb-4">Aggiorna Orari di Lavoro</h2>
       <div class="card-body">
         <form (ngSubmit)="updateWorkHours()">
-          <div class="mb-3">
-            <label for="userId" class="form-label">ID Utente:</label>
-            <input type="number" id="userId" [(ngModel)]="userId" name="userId" class="form-control" required>
-          </div>
-          
           <div class="mb-3">
             <label for="dataLavoro" class="form-label">Data:</label>
             <input type="date" id="dataLavoro" [(ngModel)]="dataLavoro" name="dataLavoro" class="form-control" required>
