@@ -13,6 +13,9 @@ import { DipendenteComponent } from './components/dipendente/dipendente.componen
 // import { RequestComponent } from './components/request/request.component';
 import { FerieRequestComponent } from './components/ferie-request/ferie-request.component';
 import { PermessiRequestComponent } from './components/permessi-request/permessi-request.component';
+import { ApproveRequestComponent } from './components/approve-requests/approve-requests.component';
+import { PermessoApproveRequestComponent } from './components/permesso-approve-request/permesso-approve-request.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { PermessiRequestComponent } from './components/permessi-request/permessi
     DipendenteComponent,
     // RequestComponent,
     FerieRequestComponent,
-    PermessiRequestComponent
+    PermessiRequestComponent,
+    ApproveRequestComponent,
+    PermessoApproveRequestComponent
   ],
   imports: [
     BrowserModule,

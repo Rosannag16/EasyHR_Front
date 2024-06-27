@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">EasyHR</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/register">Back</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container mt-4">
+    <h2>Richieste di Permessi</h2>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let permesso of permessoList">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <strong>Data inizio:</strong> {{ permesso.dataInizio }}
+            <br>
+            <strong>Data fine:</strong> {{ permesso.dataFine }}
+            <br>
+            <strong>Motivo:</strong> {{ permesso.motivo }}
+            <br>
+            <strong>ID Utente:</strong> {{ permesso.userId }}
+          </div>
+          <div>
+            <button class="btn btn-success me-2" (click)="approvePermesso(permesso.id)">Approva</button>
+            <button class="btn btn-danger" (click)="rejectPermesso(permesso.id)">Rifiuta</button>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item" *ngIf="permessoList.length === 0">Nessuna richiesta di permessi da mostrare.</li>
+    </ul>
+  </div>
+  

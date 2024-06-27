@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Ferie } from '../ferie';
-import { Permessi } from '../permessi';
 import { AuthService } from '../auth.service';
 import { RequestService } from '../request.service';
 
@@ -13,7 +12,6 @@ import { RequestService } from '../request.service';
 export class FerieRequestComponent implements OnInit {
   ferieForm!: FormGroup;
   ferieList: Ferie[] = [];
-  permessiList: Permessi[] = [];
   userId: number | null = null; // ID dell'utente
 
   constructor(
@@ -26,8 +24,7 @@ export class FerieRequestComponent implements OnInit {
     this.userId = this.authService.getUserId(); // Ottieni l'ID dell'utente
 
     if (this.userId) {
-      this.loadFerieRequests(this.userId); // Carica le ferie dell'utente
-      this.loadPermessiRequests(this.userId); // Carica i permessi dell'utente
+      this.loadFerieRequests(); // Carica le ferie dell'utente
 
       this.ferieForm = this.fb.group({
         dataInizio: ['', Validators.required],
@@ -40,8 +37,8 @@ export class FerieRequestComponent implements OnInit {
     }
   }
 
-  private loadFerieRequests(userId: number): void {
-    this.requestService.getFerieRequestsByUserId(userId).subscribe(
+  private loadFerieRequests(): void {
+    this.requestService.getFerieRequestsByUserId(this.userId!).subscribe(
       ferieList => {
         this.ferieList = ferieList;
         console.log('Ferie ricevute:', this.ferieList);
@@ -49,19 +46,6 @@ export class FerieRequestComponent implements OnInit {
       error => {
         console.error('Errore nel recuperare le ferie:', error);
         // Gestire l'errore nel recupero delle ferie qui
-      }
-    );
-  }
-
-  private loadPermessiRequests(userId: number): void {
-    this.requestService.getPermessiRequestsByUserId(userId).subscribe(
-      permessiList => {
-        this.permessiList = permessiList;
-        console.log('Permessi ricevuti:', this.permessiList);
-      },
-      error => {
-        console.error('Errore nel recuperare i permessi:', error);
-        // Gestire l'errore nel recupero dei permessi qui
       }
     );
   }
@@ -77,7 +61,7 @@ export class FerieRequestComponent implements OnInit {
         response => {
           console.log('Richiesta di ferie inviata con successo', response);
           // Opzionalmente, ricarica le ferie dopo l'invio della richiesta
-          this.loadFerieRequests(this.userId!);
+          this.loadFerieRequests();
         },
         error => {
           console.error('Errore nell\'invio della richiesta di ferie', error);
@@ -86,30 +70,20 @@ export class FerieRequestComponent implements OnInit {
     }
   }
 
-  approveFerieRequest(ferieId: number): void {
-    this.requestService.approveFerieRequest(ferieId).subscribe(
-      response => {
-        console.log('Ferie approvate con successo', response);
-        // Opzionalmente, ricarica le ferie dopo l'approvazione
-        this.loadFerieRequests(this.userId!);
-      },
-      error => {
-        console.error('Errore nell\'approvare le ferie', error);
-      }
-    );
+  getFerieStatus(ferie: Ferie): string {
+    if (!ferie.stato) {
+      return 'In attesa';
+    }
+  
+    switch (ferie.stato) {
+      case 'Approvata':
+        return 'Approvata';
+      case 'Rifiutata':
+        return 'Rifiutata';
+      default:
+        return 'In attesa';
+    }
   }
-
-  rejectFerieRequest(ferieId: number): void {
-    this.requestService.rejectFerieRequest(ferieId).subscribe(
-      response => {
-        console.log('Ferie rifiutate con successo', response);
-        // Opzionalmente, ricarica le ferie dopo il rifiuto
-        this.loadFerieRequests(this.userId!);
-      },
-      error => {
-        console.error('Errore nel rifiutare le ferie', error);
-      }
-    );
-  }
+  
 
 }

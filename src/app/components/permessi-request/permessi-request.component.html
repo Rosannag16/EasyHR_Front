@@ -45,32 +45,27 @@
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-header text-white">
-      <h2>Permessi Ricevuti</h2>
-    </div>
-    <div class="card-body">
-      <table class="table table-striped mt-3">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Reason</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let permesso of permessiList">
-            <td>{{ permesso.id }}</td>
-            <td>{{ permesso.dataInizio | date:'dd/MM/yyyy' }}</td>
-            <td>{{ permesso.dataFine | date:'dd/MM/yyyy' }}</td>
-            <td>{{ permesso.motivo }}</td>
-          </tr>
-          <tr *ngIf="permessiList.length === 0">
-            <td colspan="4" class="text-center">Nessun permesso trovato.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+  <div class="container mt-4">
+    <h2>Richieste di Permessi</h2>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let permesso of permessiList">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <strong>Data inizio:</strong> {{ permesso.dataInizio }}
+            <br>
+            <strong>Data fine:</strong> {{ permesso.dataFine }}
+            <br>
+            <strong>Motivo:</strong> {{ permesso.motivo }}
+            <br>
+            <strong>ID Utente:</strong> {{ permesso.userId }}
+          </div>
+          <div>
+            <strong>Stato:</strong> {{ getPermessiStatus(permesso) }}
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item" *ngIf="permessiList.length === 0">Nessuna richiesta di permessi da mostrare.</li>
+    </ul>
   </div>
-</div>
+  

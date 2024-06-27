@@ -14,6 +14,7 @@ export class RequestService {
 
   constructor(private http: HttpClient) { }
 
+ 
   // Aggiungi una nuova richiesta di ferie
   addFerieRequest(userId: number, dataInizio: string, dataFine: string, motivo: string): Observable<any> {
     const url = `${this.baseUrl}/ferie`;

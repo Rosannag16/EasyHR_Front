@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Permessi } from '../permessi';
 import { AuthService } from '../auth.service';
 import { RequestService } from '../request.service';
+
+import { Permessi } from '../permessi';
+import { PermessoService } from '../permesso.service';
 
 @Component({
   selector: 'app-permessi-request',
@@ -13,6 +15,7 @@ export class PermessiRequestComponent implements OnInit {
   permessiForm!: FormGroup;
   permessiList: Permessi[] = [];
   userId: number | null = null; // ID dell'utente
+  permessoService: any;
 
   constructor(
     private requestService: RequestService,
@@ -95,5 +98,32 @@ export class PermessiRequestComponent implements OnInit {
       }
     );
   }
+
+  private loadPermessi(): void {
+    this.permessoService.getAllPermessi().subscribe(
+      (permessiList: Permessi[]) => {
+        this.permessiList = permessiList.filter(permesso => permesso.stato === 'In attesa' || permesso.stato === null);
+        console.log('Richieste di permesso ricevute:', this.permessiList); // Assicurati che qui venga stampata correttamente la lista filtrata
+      },
+      (error: any) => {
+        console.error('Errore nel recuperare i permessi:', error);
+      }
+    );
+  }
+  getPermessiStatus(permesso: Permessi): string {
+    if (!permesso.stato) {
+      return 'In attesa';
+    }
+  
+    switch (permesso.stato.toUpperCase()) {
+      case 'APPROVATO':
+        return 'Approvato';
+      case 'RIFIUTATO':
+        return 'Rifiutato';
+      default:
+        return 'In attesa';
+    }
+  }
+  
 
 }

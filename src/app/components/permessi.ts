@@ -4,4 +4,5 @@ export interface Permessi {
   dataInizio: string;
   dataFine: string;
   motivo: string;
+  stato: string;
 }
