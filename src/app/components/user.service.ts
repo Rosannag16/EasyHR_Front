@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { UserDTO } from './user-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +13,9 @@ export class UserService {
 
   updateUserWorkHours(userId: number, updateData: any): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/auth/${userId}/workhours`, updateData);
+  }
+
+  getAllUsers(): Observable<UserDTO[]> {
+    return this.http.get<UserDTO[]>(`${this.baseUrl}/auth/users`);
   }
 }

@@ -14,27 +14,34 @@
     </div>
   </div>
 </nav>
-
 <div class="container mt-4">
   <h2>Richieste di Ferie</h2>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let ferie of ferieList">
-      <div class="d-flex justify-content-between align-items-center">
-        <div>
-          <strong>Data inizio:</strong> {{ ferie.dataInizio }}
-          <br>
-          <strong>Data fine:</strong> {{ ferie.dataFine }}
-          <br>
-          <strong>Motivo:</strong> {{ ferie.motivo }}
-          <br>
-          <strong>ID Utente:</strong> {{ ferie.userId }}
-        </div>
-        <div>
-          <button class="btn btn-success me-2" (click)="approveFerie(ferie.id)">Approva</button>
-          <button class="btn btn-danger" (click)="rejectFerie(ferie.id)">Rifiuta</button>
-        </div>
-      </div>
-    </li>
-    <li class="list-group-item" *ngIf="ferieList.length === 0">Nessuna richiesta di ferie da mostrare.</li>
-  </ul>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Data inizio</th>
+          <th>Data fine</th>
+          <th>Motivo</th>
+          <th>ID Utente</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ferie of ferieList">
+          <td>{{ ferie.dataInizio }}</td>
+          <td>{{ ferie.dataFine }}</td>
+          <td>{{ ferie.motivo }}</td>
+          <td>{{ ferie.userId }}</td>
+          <td>
+            <button class="btn btn-success me-2" (click)="approveFerie(ferie.id)">Approva</button>
+            <button class="btn btn-danger" (click)="rejectFerie(ferie.id)">Rifiuta</button>
+          </td>
+        </tr>
+        <tr *ngIf="ferieList.length === 0">
+          <td colspan="5" class="text-center">Nessuna richiesta di ferie da mostrare.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

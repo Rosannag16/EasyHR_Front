@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body style */
+  body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #563d7c !important;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  /* Card styles */
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Aggiunto un leggero ombreggiamento */
+  }
+  
+  .card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #7d3cff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+  }
+  
+  .card-body {
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  /* Form label styles */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: #563d7c;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #452c63;
+  }
+  
+  /* Minimum height for viewport */
+  .min-vh-100 {
+    min-height: 100vh;
+  }
+  

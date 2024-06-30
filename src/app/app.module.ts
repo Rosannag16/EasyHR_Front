@@ -15,6 +15,9 @@ import { FerieRequestComponent } from './components/ferie-request/ferie-request.
 import { PermessiRequestComponent } from './components/permessi-request/permessi-request.component';
 import { ApproveRequestComponent } from './components/approve-requests/approve-requests.component';
 import { PermessoApproveRequestComponent } from './components/permesso-approve-request/permesso-approve-request.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { FerieListComponent } from './components/ferie-list/ferie-list.component';
+import { PermessiListComponent } from './components/permessi-list/permessi-list.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { PermessoApproveRequestComponent } from './components/permesso-approve-r
     FerieRequestComponent,
     PermessiRequestComponent,
     ApproveRequestComponent,
-    PermessoApproveRequestComponent
+    PermessoApproveRequestComponent,
+    UserListComponent,
+    FerieListComponent,
+    PermessiListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">EasyHR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/register">Back</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-center">Lista delle Ferie</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>User Id</th>
+                        <th>Data Inizio</th>
+                        <th>Data Fine</th>
+                        <th>Motivazione</th>
+                        <th>Stato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ferie of ferieList">
+                        <td>{{ ferie.userId }}</td>
+                        <td>{{ ferie.dataInizio }}</td>
+                        <td>{{ ferie.dataFine }}</td>
+                        <td>{{ ferie.motivo }}</td>
+                        <td>{{ ferie.stato }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

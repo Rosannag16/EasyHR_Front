@@ -36,4 +36,9 @@ export class FerieService {
     const url = `${this.apiUrl}/request/ferie/updateStatus/${ferieId}`;
     return this.http.put(url, { stato });
   }
+
+  getAllFeries(): Observable<Ferie[]> {
+    return this.http.get<Ferie[]>(`${this.apiUrl}/request/ferie/all`);
+  }
+
 }

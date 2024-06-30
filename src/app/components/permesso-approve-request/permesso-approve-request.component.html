@@ -15,28 +15,34 @@
   </div>
 </nav>
 
-
 <div class="container mt-4">
-    <h2>Richieste di Permessi</h2>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let permesso of permessoList">
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <strong>Data inizio:</strong> {{ permesso.dataInizio }}
-            <br>
-            <strong>Data fine:</strong> {{ permesso.dataFine }}
-            <br>
-            <strong>Motivo:</strong> {{ permesso.motivo }}
-            <br>
-            <strong>ID Utente:</strong> {{ permesso.userId }}
-          </div>
-          <div>
+  <h2>Richieste di Permessi</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Data inizio</th>
+          <th>Data fine</th>
+          <th>Motivo</th>
+          <th>ID Utente</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let permesso of permessoList">
+          <td>{{ permesso.dataInizio }}</td>
+          <td>{{ permesso.dataFine }}</td>
+          <td>{{ permesso.motivo }}</td>
+          <td>{{ permesso.userId }}</td>
+          <td>
             <button class="btn btn-success me-2" (click)="approvePermesso(permesso.id)">Approva</button>
             <button class="btn btn-danger" (click)="rejectPermesso(permesso.id)">Rifiuta</button>
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item" *ngIf="permessoList.length === 0">Nessuna richiesta di permessi da mostrare.</li>
-    </ul>
+          </td>
+        </tr>
+        <tr *ngIf="permessoList.length === 0">
+          <td colspan="5" class="text-center">Nessuna richiesta di permessi da mostrare.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  
+</div>

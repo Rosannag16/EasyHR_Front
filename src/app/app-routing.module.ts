@@ -8,6 +8,11 @@ import { FerieRequestComponent } from './components/ferie-request/ferie-request.
 import { PermessiRequestComponent } from './components/permessi-request/permessi-request.component';
 import { ApproveRequestComponent } from './components/approve-requests/approve-requests.component';
 import { PermessoApproveRequestComponent } from './components/permesso-approve-request/permesso-approve-request.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { FerieListComponent } from './components/ferie-list/ferie-list.component';
+import { PermessiListComponent } from './components/permessi-list/permessi-list.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -18,6 +23,10 @@ const routes: Routes = [
   { path: 'permessi', component: PermessiRequestComponent },
   { path: 'approve-requests', component: ApproveRequestComponent},
   { path: 'permesso-approve-requests', component: PermessoApproveRequestComponent},
+  { path: 'user-list', component: UserListComponent},
+  { path: 'ferie-list', component: FerieListComponent},
+  {path: 'permessi-list', component: PermessiListComponent },
+
 
   // Aggiungi altre rotte se necessario
 ];

@@ -65,5 +65,9 @@ export class PermessoService {
         })
       );
   }
+
+  getAllPermessis(): Observable<Permessi[]> {
+    return this.http.get<Permessi[]>(`${this.baseUrl}/request/permessi/all`);
+  }
   
 }
