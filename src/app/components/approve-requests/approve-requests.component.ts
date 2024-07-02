@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Ferie } from '../ferie'; // Assicurati di importare correttamente il modello Ferie
-import { FerieService } from '../ferie.service'; // Assicurati di importare correttamente il service FerieService
+import { Ferie } from 'src/app/interface/ferie';
+import { FerieService } from 'src/app/services/ferie.service';
 
 @Component({
   selector: 'app-approve-ferie',

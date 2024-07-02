@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FerieService } from '../ferie.service';
-import { Ferie } from '../ferie';
+import { FerieService } from 'src/app/services/ferie.service';
+import { Ferie } from 'src/app/interface/ferie';
 
 @Component({
   selector: 'app-ferie-list',

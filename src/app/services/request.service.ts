@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Ferie } from './ferie';
-import { Permessi } from './permessi';
+import { Ferie } from '../interface/ferie';
+import { Permessi } from '../interface/permessi';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PermessoService } from '../permesso.service';
-import { Permessi } from '../permessi';
+import { PermessoService } from 'src/app/services/permesso.service';
+import { Permessi } from 'src/app/interface/permessi';
 
 @Component({
   selector: 'app-permessi-list',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Ferie } from '../ferie';
-import { AuthService } from '../auth.service';
-import { RequestService } from '../request.service';
+import { Ferie } from 'src/app/interface/ferie';
+import { AuthService } from 'src/app/services/auth.service';
+import { RequestService } from 'src/app/services/request.service';
 
 @Component({
   selector: 'app-ferie-request',

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
-import { UserDTO } from '../user-dto';@Component({
+import { UserService } from 'src/app/services/user.service';
+import { UserDTO } from 'src/app/interface/user-dto';
+
+
+@Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']

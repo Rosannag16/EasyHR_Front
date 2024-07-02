@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../auth.service';
-import { RequestService } from '../request.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { RequestService } from 'src/app/services/request.service';
 
-import { Permessi } from '../permessi';
-import { PermessoService } from '../permesso.service';
+import { Permessi } from 'src/app/interface/permessi';
+import { PermessoService } from 'src/app/services/permesso.service';
 
 @Component({
   selector: 'app-permessi-request',
