@@ -1,27 +1,43 @@
-# EasyHR
+# Frontend del Sistema di Gestione Ferie e Permessi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+Questo progetto rappresenta il frontend di un'applicazione per la gestione delle ferie e dei permessi dei dipendenti di un'azienda. È sviluppato in Angular e si interfaccia con il backend tramite API RESTful.
 
-## Development server
+## Tecnologie Utilizzate
+- Angular
+- TypeScript
+- HTML/CSS
+- RxJS
+- Bootstrap (o un altro framework CSS)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisiti
+- Node.js e npm (Node Package Manager)
+- Angular CLI
 
-## Code scaffolding
+## Configurazione
+1. Clona il repository sul tuo ambiente locale.
+2. Esegui `npm install` per installare tutte le dipendenze.
+3. Configura i servizi nel frontend per collegarsi agli endpoint corrispondenti nel backend (`AuthService`, `FerieService`, `PermessoService`, etc.).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Avvio dell'Applicazione
+- Esegui `ng serve` per avviare l'applicazione frontend. Naviga su `http://localhost:4200/` per visualizzare l'applicazione nel browser.
 
-## Build
+## Funzionalità Principali
+- **Login e Registrazione**
+  - Utilizza il servizio `AuthService` per effettuare il login e la registrazione degli utenti.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Gestione delle Feried**
+  - Utilizza il servizio `FerieService` per visualizzare, aggiungere, approvare e rifiutare le richieste di ferie.
 
-## Running unit tests
+- **Gestione dei Permessi**
+  - Utilizza il servizio `PermessoService` per visualizzare, aggiungere, approvare e rifiutare le richieste di permessi.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Gestione degli Utenti**
+  - Utilizza il servizio `UserService` per visualizzare l'elenco degli utenti e gestire le loro informazioni.
 
-## Running end-to-end tests
+## Struttura del Progetto
+- `src/app/components`: Contiene i componenti Angular per le diverse funzionalità dell'applicazione.
+- `src/app/services`: Contiene i servizi Angular per la comunicazione con il backend.
+- `src/app/interface`: Contiene le interfacce TypeScript per rappresentare i dati trasferiti tra frontend e backend.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Documentazione
+Per ulteriori dettagli sull'implementazione e l'utilizzo dell'applicazione frontend, consulta la documentazione inclusa nella directory `docs` del progetto.
