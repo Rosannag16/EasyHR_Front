@@ -9,10 +9,11 @@ import { Permessi } from '../interface/permessi';
 })
 export class PermessoService {
 
-  private baseUrl = 'http://localhost:8080/auth';
+  private baseUrl = 'http://localhost:8080/auth'; // Sostituisci con il tuo endpoint API
 
   constructor(private http: HttpClient) { }
 
+  // Recupera tutte le richieste di permessi
   getAllPermessi(): Observable<Permessi[]> {
     return this.http.get<Permessi[]>(`${this.baseUrl}/request/permessi/all`).pipe(
       catchError(error => {
@@ -21,6 +22,7 @@ export class PermessoService {
     );
   }
 
+  // Recupera le richieste di permessi per un utente specifico tramite userId
   getPermessiByUserId(userId: number): Observable<Permessi[]> {
     const url = `${this.baseUrl}/request/permessi`;
     const params = new HttpParams().set('userId', userId.toString());
@@ -31,6 +33,7 @@ export class PermessoService {
     );
   }
   
+  // Aggiunge una nuova richiesta di permessi
   addPermessiRequest(permesso: Permessi): Observable<any> {
     return this.http.post(`${this.baseUrl}/request/permessi`, permesso).pipe(
       catchError(error => {
@@ -39,6 +42,7 @@ export class PermessoService {
     );
   }
 
+  // Approva una richiesta di permessi tramite il suo permessoId
   approvePermessiRequest(permessoId: number): Observable<any> {
     return this.http.post(`${this.baseUrl}/request/permessi/approve?permessoId=${permessoId}`, null).pipe(
       catchError(error => {
@@ -47,6 +51,7 @@ export class PermessoService {
     );
   }
 
+  // Rifiuta una richiesta di permessi tramite il suo permessoId
   rejectPermessiRequest(permessoId: number): Observable<any> {
     return this.http.post(`${this.baseUrl}/request/permessi/reject?permessoId=${permessoId}`, null).pipe(
       catchError(error => {
@@ -55,8 +60,9 @@ export class PermessoService {
     );
   }
 
+  // Aggiorna lo stato di una richiesta di permessi tramite il suo id
   updatePermessoStatus(id: number, stato: string): Observable<any> {
-    const url = `${this.baseUrl}/updateStatus/${id}`;
+    const url = `${this.baseUrl}/request/permessi/updateStatus/${id}`;
     return this.http.put(url, { stato }, { responseType: 'json' })
       .pipe(
         catchError(error => {
@@ -66,6 +72,7 @@ export class PermessoService {
       );
   }
 
+  // Recupera tutte le richieste di permessi (nome del metodo duplicato)
   getAllPermessis(): Observable<Permessi[]> {
     return this.http.get<Permessi[]>(`${this.baseUrl}/request/permessi/all`);
   }

@@ -37,8 +37,8 @@ import { PermessiListComponent } from './components/permessi-list/permessi-list.
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule, // Add ReactiveFormsModule
-    FlatpickrModule.forRoot(), // Import FlatpickrModule
+    ReactiveFormsModule, 
+    FlatpickrModule.forRoot(), 
   ],
   providers: [],
   bootstrap: [AppComponent]

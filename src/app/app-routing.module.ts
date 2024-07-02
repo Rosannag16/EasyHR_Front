@@ -24,9 +24,6 @@ const routes: Routes = [
   { path: 'user-list', component: UserListComponent},
   { path: 'ferie-list', component: FerieListComponent},
   {path: 'permessi-list', component: PermessiListComponent },
-
-
-  // Aggiungi altre rotte se necessario
 ];
 
 @NgModule({

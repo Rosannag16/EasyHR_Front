@@ -13,12 +13,13 @@ export class RegisterComponent {
   nome: string = '';
   cognome: string = '';
 
-  userRegistered: boolean = false;
-  registrationMessage: string = '';
+  userRegistered: boolean = false; // Flag per indicare se la registrazione è avvenuta con successo
+  registrationMessage: string = ''; // Messaggio di conferma o errore durante la registrazione
 
   constructor(private authService: AuthService) { }
 
   onSubmit(): void {
+    // Creazione dell'oggetto utente con i dati dal form
     const user = {
       username: this.username,
       email: this.email,
@@ -27,6 +28,7 @@ export class RegisterComponent {
       cognome: this.cognome
     };
 
+    // Chiamata al metodo di registrazione del servizio AuthService
     this.authService.register(user).subscribe(
       response => {
         console.log('Registration successful', response);

@@ -14,8 +14,7 @@ export class RequestService {
 
   constructor(private http: HttpClient) { }
 
- 
-  // Aggiungi una nuova richiesta di ferie
+  // Aggiunge una nuova richiesta di ferie
   addFerieRequest(userId: number, dataInizio: string, dataFine: string, motivo: string): Observable<any> {
     const url = `${this.baseUrl}/ferie`;
     const body = { userId, dataInizio, dataFine, motivo };
@@ -26,7 +25,7 @@ export class RequestService {
     );
   }
 
-  // Aggiungi una nuova richiesta di permessi
+  // Aggiunge una nuova richiesta di permessi
   addPermessiRequest(userId: number, dataInizio: string, dataFine: string, motivo: string): Observable<any> {
     const url = `${this.baseUrl}/permessi`;
     const body = { userId, dataInizio, dataFine, motivo };
@@ -37,7 +36,7 @@ export class RequestService {
     );
   }
 
-  // Ottieni tutte le richieste di ferie
+  // Ottiene tutte le richieste di ferie
   getAllFerieRequests(): Observable<Ferie[]> {
     const url = `${this.baseUrl}/ferie`;
     return this.http.get<Ferie[]>(url).pipe(
@@ -47,7 +46,7 @@ export class RequestService {
     );
   }
 
-  // Ottieni le richieste di ferie per un determinato userId
+  // Ottiene le richieste di ferie per un determinato userId
   getFerieRequestsByUserId(userId: number): Observable<Ferie[]> {
     return this.http.get<Ferie[]>(`${this.baseUrl}/ferie?userId=${userId}`).pipe(
       catchError(error => {
@@ -56,7 +55,7 @@ export class RequestService {
     );
   }
 
-  // Approva una richiesta di ferie specificata
+  // Approva una specifica richiesta di ferie
   approveFerieRequest(ferieId: number): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/ferie/approve?ferieId=${ferieId}`, null).pipe(
       catchError(error => {
@@ -65,7 +64,7 @@ export class RequestService {
     );
   }
 
-  // Rifiuta una richiesta di ferie specificata
+  // Rifiuta una specifica richiesta di ferie
   rejectFerieRequest(ferieId: number): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/ferie/reject?ferieId=${ferieId}`, null).pipe(
       catchError(error => {
@@ -74,7 +73,7 @@ export class RequestService {
     );
   }
 
-  // Ottieni tutte le richieste di permessi
+  // Ottiene tutte le richieste di permessi
   getAllPermessiRequests(): Observable<Permessi[]> {
     const url = `${this.baseUrl}/permessi`;
     return this.http.get<Permessi[]>(url).pipe(
@@ -84,7 +83,7 @@ export class RequestService {
     );
   }
 
-  // Ottieni le richieste di permessi per un determinato userId
+  // Ottiene le richieste di permessi per un determinato userId
   getPermessiRequestsByUserId(userId: number): Observable<Permessi[]> {
     return this.http.get<Permessi[]>(`${this.baseUrl}/permessi?userId=${userId}`).pipe(
       catchError(error => {
@@ -93,7 +92,7 @@ export class RequestService {
     );
   }
 
-  // Approva una richiesta di permessi specificata
+  // Approva una specifica richiesta di permessi
   approvePermessiRequest(permessoId: number): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/permessi/approve?permessoId=${permessoId}`, null).pipe(
       catchError(error => {
@@ -102,7 +101,7 @@ export class RequestService {
     );
   }
 
-  // Rifiuta una richiesta di permessi specificata
+  // Rifiuta una specifica richiesta di permessi
   rejectPermessiRequest(permessoId: number): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/permessi/reject?permessoId=${permessoId}`, null).pipe(
       catchError(error => {

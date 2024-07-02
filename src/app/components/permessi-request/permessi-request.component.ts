@@ -12,23 +12,24 @@ import { PermessoService } from 'src/app/services/permesso.service';
   styleUrls: ['./permessi-request.component.css']
 })
 export class PermessiRequestComponent implements OnInit {
-  permessiForm!: FormGroup;
-  permessiList: Permessi[] = [];
+  permessiForm!: FormGroup; // Form per la richiesta di permessi
+  permessiList: Permessi[] = []; // Lista dei permessi dell'utente
   userId: number | null = null; // ID dell'utente
-  permessoService: any;
 
   constructor(
     private requestService: RequestService,
     private fb: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private permessoService: PermessoService // Inietta il servizio PermessoService per gestire i permessi
   ) {}
 
   ngOnInit(): void {
-    this.userId = this.authService.getUserId(); // Ottieni l'ID dell'utente
+    this.userId = this.authService.getUserId(); // Ottieni l'ID dell'utente autenticato
 
     if (this.userId) {
-      this.loadPermessiRequests(this.userId); // Carica i permessi dell'utente
+      this.loadPermessiRequests(this.userId); // Carica le richieste di permessi dell'utente
 
+      // Inizializza il form per la richiesta di permessi
       this.permessiForm = this.fb.group({
         dataInizio: ['', Validators.required],
         dataFine: ['', Validators.required],
@@ -36,23 +37,25 @@ export class PermessiRequestComponent implements OnInit {
       });
     } else {
       console.error('ID utente non trovato. Assicurati di aver effettuato l\'accesso.');
-      // Puoi gestire il caso in cui l'ID utente non è disponibile qui
+      // Gestisci il caso in cui l'ID utente non è disponibile
     }
   }
 
+  // Metodo privato per caricare le richieste di permessi dell'utente
   private loadPermessiRequests(userId: number): void {
     this.requestService.getPermessiRequestsByUserId(userId).subscribe(
       permessiList => {
-        this.permessiList = permessiList;
+        this.permessiList = permessiList; // Assegna la lista di permessi ricevuti alla variabile permessiList
         console.log('Permessi ricevuti:', this.permessiList);
       },
       error => {
         console.error('Errore nel recuperare i permessi:', error);
-        // Gestire l'errore nel recupero dei permessi qui
+        // Gestisci l'errore nel recupero dei permessi
       }
     );
   }
 
+  // Metodo per gestire la sottomissione del form per la richiesta di permessi
   onSubmit(): void {
     if (this.permessiForm.valid && this.userId) {
       this.requestService.addPermessiRequest(
@@ -73,6 +76,7 @@ export class PermessiRequestComponent implements OnInit {
     }
   }
 
+  // Metodo per approvare una richiesta di permessi specifica
   approvePermessiRequest(permessoId: number): void {
     this.requestService.approvePermessiRequest(permessoId).subscribe(
       response => {
@@ -86,6 +90,7 @@ export class PermessiRequestComponent implements OnInit {
     );
   }
 
+  // Metodo per rifiutare una richiesta di permessi specifica
   rejectPermessiRequest(permessoId: number): void {
     this.requestService.rejectPermessiRequest(permessoId).subscribe(
       response => {
@@ -99,17 +104,20 @@ export class PermessiRequestComponent implements OnInit {
     );
   }
 
+  // Metodo privato per caricare i permessi in attesa tramite il PermessoService
   private loadPermessi(): void {
     this.permessoService.getAllPermessi().subscribe(
       (permessiList: Permessi[]) => {
         this.permessiList = permessiList.filter(permesso => permesso.stato === 'In attesa' || permesso.stato === null);
-        console.log('Richieste di permesso ricevute:', this.permessiList); // Assicurati che qui venga stampata correttamente la lista filtrata
+        console.log('Richieste di permesso ricevute:', this.permessiList);
       },
       (error: any) => {
         console.error('Errore nel recuperare i permessi:', error);
       }
     );
   }
+
+  // Metodo per ottenere lo stato di una specifica richiesta di permessi
   getPermessiStatus(permesso: Permessi): string {
     if (!permesso.stato) {
       return 'In attesa';
@@ -124,6 +132,5 @@ export class PermessiRequestComponent implements OnInit {
         return 'In attesa';
     }
   }
-  
-
 }
+
