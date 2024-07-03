@@ -1,38 +1,91 @@
-body {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .navbar {
-    background-color:  #910954 !important;
-  }
-  
-  .navbar-brand, .nav-link {
-    font-weight: bold;
-    color: #fff !important;
-  }
-  
-  .card {
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .card-header {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    background-color:  #910954;
-  }
-  
-  .form-label {
-    font-weight: bold;
-  }
-  
-  .btn-primary {
-    background-color:  #910954;
-    border: none;
-  }
-  
-  .btn-primary:hover {
-    background-color: #d177a9;
-  }
-  
+/* Stili per la navbar */
+.navbar {
+  background-color: #e07f00 !important; /* Colore di sfondo arancione */
+}
+
+/* Stili per l'intestazione della card */
+.card-header {
+  background-color: #e07f00; /* Colore di sfondo arancione */
+  color: white; /* Testo bianco */
+  text-align: center; /* Testo centrato */
+  font-size: 2rem; /* Dimensione del carattere */
+  font-weight: bold; /* Testo in grassetto */
+  margin-bottom: 1.5rem; /* Margine inferiore */
+  padding: 1rem; /* Padding interno */
+  border-radius: 10px; /* Bordi arrotondati */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Stili per il testo della navbar */
+.navbar-brand {
+  font-weight: bold;
+  color: #fff !important; /* Testo bianco */
+}
+
+/* Stili per la card principale */
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff; /* Sfondo bianco per contrasto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Stili per il titolo della card */
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333; /* Testo principale */
+}
+
+/* Stili per le etichette dei form */
+.form-label {
+  font-weight: bold;
+  color: #333; /* Testo principale */
+}
+
+/* Stili per i pulsanti primari */
+.btn-primary {
+  background-color: #e07f00;
+  border: none;
+  color: #fff; /* Testo bianco */
+}
+
+/* Effetto hover per i pulsanti primari */
+.btn-primary:hover {
+  background-color: #f3b560; /* Arancione più chiaro */
+}
+
+/* Altezza minima per la vista */
+.min-vh-100 {
+  min-height: calc(100vh - 56px); /* Calcola altezza minima meno l'altezza della navbar */
+  padding-top: 20px; /* Spazio superiore */
+}
+
+/* Stili per il messaggio di successo */
+.success-message {
+  padding: 1rem;
+  background-color: #fbebc8; /* Arancione chiaro per il messaggio di successo */
+  border: 1px solid #f5d78f; /* Colore del bordo */
+  color: #e07f00; /* Colore del testo */
+  border-radius: 0.25rem;
+  animation: fadeIn 0.5s ease; /* Animazione di dissolvenza */
+  margin-bottom: 10px; /* Margine inferiore */
+  display: flex; /* Layout flessibile */
+  align-items: center; /* Allinea al centro verticalmente */
+}
+
+.success-message p {
+  margin: 0;
+  padding-left: 0.5rem;
+  font-weight: 700; /* Testo grassetto */
+}
+
+.success-icon {
+  font-size: 1.5rem;
+  color: #5a8a11; /* Colore dell'icona */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } /* Opacità iniziale */
+  to { opacity: 1; } /* Opacità finale */
+}

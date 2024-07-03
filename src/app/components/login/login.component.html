@@ -13,18 +13,20 @@
   </div>
 </nav>
 
-<div class="d-flex justify-content-center align-items-center min-vh-100 bg-danger-subtle">
+<div class="d-flex justify-content-center align-items-center min-vh-100">
   <div class="card p-4 shadow-lg" style="width: 30rem;">
     <div class="card-body">
       <h2 class="card-title text-center text-dark">Login</h2>
       <form (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email"
+            placeholder="Enter your email" required>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Enter your password" required>
+          <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password"
+            placeholder="Enter your password" required>
         </div>
         <button type="submit" class="btn btn-primary w-100">Submit</button>
       </form>

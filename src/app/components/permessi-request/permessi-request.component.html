@@ -24,16 +24,16 @@
 <div class="container mt-5">
   <div class="card mb-4">
     <div class="card-header text-white">
-      <h2>Submit Permessi Request</h2>
+      <h2>Invia Richiesta Permessi</h2>
     </div>
     <div class="card-body">
       <form [formGroup]="permessiForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-          <label for="dataInizio" class="form-label">Data Inizio:</label>
+          <label for="dataInizio" class="form-label">Data di Inizio:</label>
           <input id="dataInizio" formControlName="dataInizio" type="date" class="form-control">
         </div>
         <div class="mb-3">
-          <label for="dataFine" class="form-label">Data Fine:</label>
+          <label for="dataFine" class="form-label">Data di Fine:</label>
           <input id="dataFine" formControlName="dataFine" type="date" class="form-control">
         </div>
         <div class="mb-3">
@@ -45,16 +45,15 @@
     </div>
   </div>
 
-
   <div class="container mt-4">
     <h2>Richieste di Permessi</h2>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let permesso of permessiList">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <strong>Data inizio:</strong> {{ permesso.dataInizio }}
+            <strong>Data di Inizio:</strong> {{ permesso.dataInizio }}
             <br>
-            <strong>Data fine:</strong> {{ permesso.dataFine }}
+            <strong>Data di Fine:</strong> {{ permesso.dataFine }}
             <br>
             <strong>Motivo:</strong> {{ permesso.motivo }}
             <br>
@@ -68,4 +67,4 @@
       <li class="list-group-item" *ngIf="permessiList.length === 0">Nessuna richiesta di permessi da mostrare.</li>
     </ul>
   </div>
-  
+</div>

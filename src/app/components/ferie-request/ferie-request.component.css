@@ -1,10 +1,6 @@
-body {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .navbar {
-  background-color: #910954 !important;
+  background-color: #e07f00 !important; /* Arancione chiaro per la navbar */
 }
 
 .navbar-brand, .nav-link {
@@ -20,8 +16,7 @@ body {
 .card-header {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  background-color: #910954;
-  color: white; /* Ensure text is readable */
+  background-color: #e07f00; /* Arancione chiaro per l'intestazione della carta */
 }
 
 .form-label {
@@ -29,10 +24,35 @@ body {
 }
 
 .btn-primary {
-  background-color: #910954;
+  background-color: #e07f00;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #d177a9;
+  background-color: #f3b560; /* Colore di sfondo durante l'hover */
+}
+
+.success-message {
+  padding: 1rem;
+  background-color: #fbebc8; /* Arancione chiaro per il messaggio di successo */
+  border: 1px solid #f5d78f; /* Colore del bordo */
+  color: #e07f00; /* Colore del testo */
+  border-radius: 0.25rem;
+  animation: fadeIn 0.5s ease;
+  margin-bottom: 10px; /* Aggiungi spazio sotto al messaggio */
+}
+
+.success-message p {
+  margin: 0;
+  padding-left: 0.5rem;
+  font-weight: 700;
+}
+
+.success-icon {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

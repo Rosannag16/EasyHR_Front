@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* Stili generici per l'intero sito */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+.navbar-nav .nav-link {
+  color: white !important; /* Colore del testo bianco */
+ 
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white;  /* Testo bianco per contrasto */
+
+}

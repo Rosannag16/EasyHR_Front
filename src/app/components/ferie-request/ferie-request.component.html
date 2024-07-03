@@ -24,23 +24,23 @@
 <div class="container mt-5">
   <div class="card mb-4">
     <div class="card-header text-white">
-      <h2>Submit Ferie Request</h2>
+      <h2>Invia Richiesta Ferie</h2>
     </div>
     <div class="card-body">
       <form [formGroup]="ferieForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-          <label for="dataInizio" class="form-label">Start Date:</label>
+          <label for="dataInizio" class="form-label">Data di Inizio:</label>
           <input id="dataInizio" formControlName="dataInizio" type="date" class="form-control">
         </div>
         <div class="mb-3">
-          <label for="dataFine" class="form-label">End Date:</label>
+          <label for="dataFine" class="form-label">Data di Fine:</label>
           <input id="dataFine" formControlName="dataFine" type="date" class="form-control">
         </div>
         <div class="mb-3">
-          <label for="motivo" class="form-label">Reason:</label>
+          <label for="motivo" class="form-label">Motivo:</label>
           <textarea id="motivo" formControlName="motivo" class="form-control"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+        <button type="submit" class="btn btn-primary w-100">Invia Richiesta</button>
       </form>
     </div>
   </div>
@@ -51,9 +51,9 @@
       <li class="list-group-item" *ngFor="let ferie of ferieList">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <strong>Data inizio:</strong> {{ ferie.dataInizio }}
+            <strong>Data di Inizio:</strong> {{ ferie.dataInizio }}
             <br>
-            <strong>Data fine:</strong> {{ ferie.dataFine }}
+            <strong>Data di Fine:</strong> {{ ferie.dataFine }}
             <br>
             <strong>Motivo:</strong> {{ ferie.motivo }}
             <br>

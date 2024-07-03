@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand text-white" href="#">EasyHR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -7,9 +7,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item me-3">
-          <a class="nav-link text-white" routerLink="/login">Back</a>
-        </li>
         <li class="nav-item me-3">
           <a class="nav-link text-white" routerLink="/approve-requests">Richieste Ferie</a>
         </li>
@@ -30,14 +27,12 @@
   </div>
 </nav>
 
-
-
 <!-- Main content with registration form -->
-<div class="container mt-5">
+<div class="container mt-5 main-container">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card shadow-lg">
-        <div class="card-header bg-purple text-white">
+        <div class="card-header bg-purple text-white" style="font-family: 'Roboto', sans-serif;">
           Registrazione Utente
         </div>
         <div class="card-body">
@@ -72,7 +67,8 @@
           </form>
 
           <!-- Success message -->
-          <div *ngIf="userRegistered" class="mt-3">
+          <div *ngIf="userRegistered" class="success-message">
+            <i class="fas fa-check-circle success-icon"></i>
             <p>{{ registrationMessage }}</p>
           </div>
         </div>
