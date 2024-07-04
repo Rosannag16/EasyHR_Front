@@ -25,7 +25,7 @@ Questo progetto rappresenta il frontend di un'applicazione per la gestione delle
 - **Login e Registrazione**
   - Utilizza il servizio `AuthService` per effettuare il login e la registrazione degli utenti.
 
-- **Gestione delle Feried**
+- **Gestione delle Ferie**
   - Utilizza il servizio `FerieService` per visualizzare, aggiungere, approvare e rifiutare le richieste di ferie.
 
 - **Gestione dei Permessi**
@@ -37,7 +37,23 @@ Questo progetto rappresenta il frontend di un'applicazione per la gestione delle
 ## Struttura del Progetto
 - `src/app/components`: Contiene i componenti Angular per le diverse funzionalità dell'applicazione.
 - `src/app/services`: Contiene i servizi Angular per la comunicazione con il backend.
-- `src/app/interface`: Contiene le interfacce TypeScript per rappresentare i dati trasferiti tra frontend e backend.
+- `src/app/interfaces`: Contiene le interfacce TypeScript per rappresentare i dati trasferiti tra frontend e backend.
 
-## Documentazione
-Per ulteriori dettagli sull'implementazione e l'utilizzo dell'applicazione frontend, consulta la documentazione inclusa nella directory `docs` del progetto.
+
+## Test degli Account
+Per testare l'applicazione, puoi utilizzare i seguenti account di prova:
+
+- **ADMIN**: 
+  - Email: `admin_user@example.com`
+  - Password: `admin1`
+  
+- **Dipendente creato dall'admin**: 
+  - Email: `userByAdmin@test.com`
+  - Password: `User1`
+  
+  È l'admin a creare le credenziali per i dipendenti.
+
+## Link Repository Backend
+Il repository del backend può essere trovato al seguente link: [EasyHR_Back Repository](https://github.com/yourusername/EasyHR_Back)
+
+Per ulteriori dettagli sugli endpoint disponibili e sugli schemi delle richieste e delle risposte del backend, consulta la [documentazione API su Postman](https://documenter.getpostman.com/view/33267926/2sA3dyhApC).
