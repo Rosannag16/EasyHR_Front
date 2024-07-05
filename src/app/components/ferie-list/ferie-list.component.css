@@ -1,59 +1,58 @@
 /* Stili specifici per il componente delle ferie */
 .table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Imposta la larghezza della tabella al 100% del contenitore */
+  border-collapse: collapse; /* Rimuove gli spazi tra i bordi delle celle */
+  background-color: #f0f0f0; /* Imposta il colore di sfondo della tabella */
+  border-radius: 8px; /* Arrotonda gli angoli della tabella */
+  overflow: hidden; /* Nasconde il contenuto che eccede i bordi della tabella */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra alla tabella */
 }
 
 .table td, .table th {
-  padding: 12px;
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #dcdcdc;
+  padding: 12px; /* Aggiunge uno spazio interno alle celle */
+  text-align: left; /* Allinea il testo a sinistra */
+  vertical-align: middle; /* Allinea verticalmente il contenuto al centro */
+  border-bottom: 1px solid #dcdcdc; /* Aggiunge un bordo inferiore alle celle */
 }
 
 .table thead {
-  background-color: #6ab0de;
-  color: #fff;
+  background-color: #6ab0de; /* Imposta il colore di sfondo dell'intestazione della tabella */
+  color: #fff; /* Imposta il colore del testo nell'intestazione della tabella */
 }
 
 .table tbody tr {
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; /* Aggiunge una transizione per il cambio di colore di sfondo delle righe */
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #d1e8f5;
+  background-color: #d1e8f5; /* Imposta il colore di sfondo delle righe pari */
 }
 
 .table tbody tr:hover {
-  background-color: #b7d9eb;
+  background-color: #b7d9eb; /* Imposta il colore di sfondo della riga al passaggio del mouse */
 }
 
 .btn-success, .btn-danger {
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: #5bc0de; /* Imposta il colore di sfondo dei bottoni */
+  border-color: #5bc0de; /* Imposta il colore del bordo dei bottoni */
+  color: #fff; /* Imposta il colore del testo dei bottoni */
+  padding: 6px 12px; /* Aggiunge uno spazio interno ai bottoni */
+  border-radius: 4px; /* Arrotonda gli angoli dei bottoni */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* Aggiunge una transizione ai cambiamenti di stile dei bottoni */
 }
 
 .btn-success:hover, .btn-danger:hover {
-  background-color: #2aabd2;
-  border-color: #2aabd2;
-  color: #fff;
+  background-color: #2aabd2; /* Imposta il colore di sfondo dei bottoni al passaggio del mouse */
+  border-color: #2aabd2; /* Imposta il colore del bordo dei bottoni al passaggio del mouse */
+  color: #fff; /* Imposta il colore del testo dei bottoni al passaggio del mouse */
 }
 
 .text-center {
-  text-align: center;
-  font-style: italic;
-  color: #95a5a6;
+  text-align: center; /* Allinea il testo al centro */
+  font-style: italic; /* Imposta lo stile del font in corsivo */
+  color: #95a5a6; /* Imposta il colore del testo */
 }
 
 .navbar{
-  background-color: #63afe2 !important;
+  background-color: #63afe2 !important; /* Imposta il colore di sfondo della navbar */
 }
-

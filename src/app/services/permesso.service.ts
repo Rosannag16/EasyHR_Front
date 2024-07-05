@@ -62,7 +62,7 @@ export class PermessoService {
 
   // Aggiorna lo stato di una richiesta di permessi tramite il suo id
   updatePermessoStatus(id: number, stato: string): Observable<any> {
-    const url = `${this.baseUrl}/request/permessi/updateStatus/${id}`;
+    const url = `${this.baseUrl}/updateStatus/${id}`;
     return this.http.put(url, { stato }, { responseType: 'json' })
       .pipe(
         catchError(error => {

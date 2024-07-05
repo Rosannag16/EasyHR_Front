@@ -1,9 +1,8 @@
-
 /* Stile per il body */
 .d-flex {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden; /* Impedisce lo scrolling del body */
-  background: linear-gradient(135deg, #7fd8f0 0%, #e07f00 100%);
+  background: linear-gradient(135deg, #7fd8f0 0%, #e07f00 100%); /* Sfondo con gradiente */
 }
 
 /* Stili per la navbar */
@@ -12,40 +11,40 @@
 }
 
 .navbar-brand {
-  font-weight: bold;
+  font-weight: bold; /* Testo in grassetto per il brand della navbar */
   color: #fff !important; /* Testo bianco */
 }
 
 /* Stili per la card */
 .card {
-  border: none;
-  border-radius: 10px;
+  border: none; /* Rimuove i bordi della card */
+  border-radius: 10px; /* Arrotonda gli angoli della card */
 }
 
 .card-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem; /* Imposta la dimensione del font del titolo della card */
+  margin-bottom: 1.5rem; /* Aggiunge un margine inferiore al titolo della card */
   color: #fff; /* Testo bianco */
 }
 
 /* Stili per le etichette dei form */
 .form-label {
-  font-weight: bold;
+  font-weight: bold; /* Imposta il testo delle etichette del form in grassetto */
   color: #fff; /* Testo bianco */
 }
 
 /* Stili per i pulsanti */
 .btn-primary {
-  background-color: #e07f00;
-  border: none;
+  background-color: #e07f00; /* Colore di sfondo del pulsante primario */
+  border: none; /* Rimuove il bordo del pulsante primario */
   color: #fff; /* Testo bianco */
 }
 
 .btn-primary:hover {
-  background-color: #f3b560; /* Arancione più chiaro */
+  background-color: #f3b560; /* Colore di sfondo durante l'hover */
 }
 
 /* Altezza minima per la vista */
 .min-vh-100 {
-  min-height: 100vh;
+  min-height: 100vh; /* Imposta un'altezza minima di 100vh (altezza viewport) */
 }

@@ -1,31 +1,30 @@
-
 .navbar {
   background-color: #e07f00 !important; /* Arancione chiaro per la navbar */
 }
 
 .navbar-brand, .nav-link {
-  font-weight: bold;
-  color: #fff !important;
+  font-weight: bold; /* Imposta il testo in grassetto per il brand della navbar e i link */
+  color: #fff !important; /* Colore bianco per il testo del brand e dei link nella navbar */
 }
 
 .card {
-  border: none;
-  border-radius: 10px;
+  border: none; /* Rimuove i bordi della card */
+  border-radius: 10px; /* Arrotonda gli angoli della card */
 }
 
 .card-header {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  background-color: #e07f00; /* Arancione chiaro per l'intestazione della carta */
+  font-size: 1.5rem; /* Imposta la dimensione del font dell'intestazione della card */
+  margin-bottom: 1rem; /* Aggiunge un margine inferiore all'intestazione della card */
+  background-color: #e07f00; /* Arancione chiaro per l'intestazione della card */
 }
 
 .form-label {
-  font-weight: bold;
+  font-weight: bold; /* Imposta il testo delle etichette del form in grassetto */
 }
 
 .btn-primary {
-  background-color: #e07f00;
-  border: none;
+  background-color: #e07f00; /* Arancione chiaro per il bottone primario */
+  border: none; /* Rimuove il bordo del bottone primario */
 }
 
 .btn-primary:hover {
@@ -33,23 +32,23 @@
 }
 
 .success-message {
-  padding: 1rem;
+  padding: 1rem; /* Aggiunge uno spazio interno al messaggio di successo */
   background-color: #fbebc8; /* Arancione chiaro per il messaggio di successo */
   border: 1px solid #f5d78f; /* Colore del bordo */
   color: #e07f00; /* Colore del testo */
-  border-radius: 0.25rem;
-  animation: fadeIn 0.5s ease;
-  margin-bottom: 10px; /* Aggiungi spazio sotto al messaggio */
+  border-radius: 0.25rem; /* Arrotonda gli angoli del messaggio di successo */
+  animation: fadeIn 0.5s ease; /* Aggiunge un'animazione di fade-in al messaggio di successo */
+  margin-bottom: 10px; /* Aggiunge spazio sotto al messaggio */
 }
 
 .success-message p {
-  margin: 0;
-  padding-left: 0.5rem;
-  font-weight: 700;
+  margin: 0; /* Rimuove il margine del paragrafo */
+  padding-left: 0.5rem; /* Aggiunge uno spazio a sinistra del paragrafo */
+  font-weight: 700; /* Imposta il testo del paragrafo in grassetto */
 }
 
 .success-icon {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Imposta la dimensione del font dell'icona di successo */
 }
 
 @keyframes fadeIn {

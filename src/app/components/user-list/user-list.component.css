@@ -1,58 +1,69 @@
 /* Stili specifici per il componente delle ferie */
+
+/* Stile base della tabella */
 .table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Occupa tutta la larghezza disponibile */
+  border-collapse: collapse; /* Fonde i bordi delle celle */
+  background-color: #f0f0f0; /* Colore di sfondo della tabella */
+  border-radius: 8px; /* Bordi arrotondati */
+  overflow: hidden; /* Nasconde eventuali overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
 }
 
+/* Stili per le celle della tabella */
 .table td, .table th {
-  padding: 12px;
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #dcdcdc;
+  padding: 12px; /* Spaziatura interna */
+  text-align: left; /* Allineamento testo */
+  vertical-align: middle; /* Allineamento verticale */
+  border-bottom: 1px solid #dcdcdc; /* Bordo inferiore */
 }
 
+/* Stili per l'intestazione della tabella */
 .table thead {
-  background-color: #6ab0de;
-  color: #fff;
+  background-color: #6ab0de; /* Colore di sfondo */
+  color: #fff; /* Colore del testo */
 }
 
+/* Transizione per le righe del corpo della tabella */
 .table tbody tr {
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; /* Transizione durante l'hover */
 }
 
+/* Colore di sfondo per le righe pari del corpo della tabella */
 .table tbody tr:nth-child(even) {
   background-color: #d1e8f5;
 }
 
+/* Colore di sfondo al passaggio del mouse sulle righe del corpo della tabella */
 .table tbody tr:hover {
   background-color: #b7d9eb;
 }
 
+/* Stili per i bottoni di successo e di errore */
 .btn-success, .btn-danger {
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: #5bc0de; /* Colore di sfondo */
+  border-color: #5bc0de; /* Colore del bordo */
+  color: #fff; /* Colore del testo */
+  padding: 6px 12px; /* Spaziatura interna */
+  border-radius: 4px; /* Bordi arrotondati */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* Transizioni */
 }
 
+/* Stili al passaggio del mouse per i bottoni di successo e di errore */
 .btn-success:hover, .btn-danger:hover {
-  background-color: #2aabd2;
-  border-color: #2aabd2;
-  color: #fff;
+  background-color: #2aabd2; /* Colore di sfondo */
+  border-color: #2aabd2; /* Colore del bordo */
+  color: #fff; /* Colore del testo */
 }
 
+/* Stili per il testo centrato */
 .text-center {
-  text-align: center;
-  font-style: italic;
-  color: #95a5a6;
+  text-align: center; /* Allineamento testo */
+  font-style: italic; /* Stile corsivo */
+  color: #95a5a6; /* Colore del testo */
 }
 
-.navbar{
-  background-color: #63afe2 !important;
+/* Stili per la navbar */
+.navbar {
+  background-color: #63afe2 !important; /* Colore di sfondo della navbar */
 }

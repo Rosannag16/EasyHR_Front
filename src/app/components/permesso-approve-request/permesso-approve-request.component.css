@@ -1,58 +1,58 @@
 /* Stili specifici per il componente delle ferie */
 .table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Larghezza al 100% */
+  border-collapse: collapse; /* Collassa i bordi della tabella */
+  background-color: #f0f0f0; /* Colore di sfondo della tabella */
+  border-radius: 8px; /* Angoli arrotondati */
+  overflow: hidden; /* Nascondi eventuali overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
 }
 
 .table td, .table th {
-  padding: 12px;
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #dcdcdc;
+  padding: 12px; /* Spaziatura interna delle celle */
+  text-align: left; /* Allineamento del testo a sinistra */
+  vertical-align: middle; /* Allineamento verticale al centro */
+  border-bottom: 1px solid #dcdcdc; /* Bordo inferiore delle celle */
 }
 
 .table thead {
-  background-color: #6ab0de;
-  color: #fff;
+  background-color: #6ab0de; /* Colore di sfondo dell'intestazione */
+  color: #fff; /* Colore del testo dell'intestazione */
 }
 
 .table tbody tr {
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; /* Transizione del colore di sfondo */
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #d1e8f5;
+  background-color: #d1e8f5; /* Colore di sfondo per le righe pari */
 }
 
 .table tbody tr:hover {
-  background-color: #b7d9eb;
+  background-color: #b7d9eb; /* Colore di sfondo al passaggio del mouse */
 }
 
 .btn-success, .btn-danger {
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: #5bc0de; /* Colore di sfondo per i pulsanti di successo e di pericolo */
+  border-color: #5bc0de; /* Colore del bordo */
+  color: #fff; /* Colore del testo */
+  padding: 6px 12px; /* Spaziatura interna */
+  border-radius: 4px; /* Angoli arrotondati */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* Transizioni */
 }
 
 .btn-success:hover, .btn-danger:hover {
-  background-color: #2aabd2;
-  border-color: #2aabd2;
-  color: #fff;
+  background-color: #2aabd2; /* Colore di sfondo al passaggio del mouse */
+  border-color: #2aabd2; /* Colore del bordo al passaggio del mouse */
+  color: #fff; /* Colore del testo */
 }
 
 .text-center {
-  text-align: center;
-  font-style: italic;
-  color: #95a5a6;
+  text-align: center; /* Allineamento al centro */
+  font-style: italic; /* Testo in corsivo */
+  color: #95a5a6; /* Colore del testo */
 }
 
-.navbar{
-  background-color: #63afe2 !important;
+.navbar {
+  background-color: #63afe2 !important; /* Colore di sfondo della navbar */
 }

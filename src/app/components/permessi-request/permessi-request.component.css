@@ -1,57 +1,62 @@
-
+/* Stili specifici per la navbar */
 .navbar {
   background-color: #e07f00 !important; /* Arancione chiaro per la navbar */
 }
 
 .navbar-brand, .nav-link {
-  font-weight: bold;
-  color: #fff !important;
+  font-weight: bold; /* Testo in grassetto per il brand e i link */
+  color: #fff !important; /* Testo bianco */
 }
 
+/* Stili specifici per la card */
 .card {
-  border: none;
-  border-radius: 10px;
+  border: none; /* Nessun bordo */
+  border-radius: 10px; /* Angoli arrotondati */
 }
 
 .card-header {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  background-color: #e07f00; /* Arancione chiaro per l'intestazione della carta */
+  font-size: 1.5rem; /* Dimensione del font per l'intestazione della card */
+  margin-bottom: 1rem; /* Spaziatura inferiore */
+  background-color: #e07f00; /* Arancione chiaro per l'intestazione della card */
 }
 
+/* Stili specifici per le etichette del form */
 .form-label {
-  font-weight: bold;
+  font-weight: bold; /* Testo in grassetto */
 }
 
+/* Stili specifici per i pulsanti primari */
 .btn-primary {
-  background-color: #e07f00;
-  border: none;
+  background-color: #e07f00; /* Arancione chiaro per il pulsante */
+  border: none; /* Nessun bordo */
 }
 
 .btn-primary:hover {
   background-color: #f3b560; /* Colore di sfondo durante l'hover */
 }
 
+/* Stili specifici per i messaggi di successo */
 .success-message {
-  padding: 1rem;
+  padding: 1rem; /* Spaziatura interna */
   background-color: #fbebc8; /* Arancione chiaro per il messaggio di successo */
   border: 1px solid #f5d78f; /* Colore del bordo */
   color: #e07f00; /* Colore del testo */
-  border-radius: 0.25rem;
-  animation: fadeIn 0.5s ease;
-  margin-bottom: 10px; /* Aggiungi spazio sotto al messaggio */
+  border-radius: 0.25rem; /* Angoli arrotondati */
+  animation: fadeIn 0.5s ease; /* Animazione di fade-in */
+  margin-bottom: 10px; /* Spaziatura inferiore */
 }
 
 .success-message p {
-  margin: 0;
-  padding-left: 0.5rem;
-  font-weight: 700;
+  margin: 0; /* Nessun margine */
+  padding-left: 0.5rem; /* Spaziatura a sinistra */
+  font-weight: 700; /* Testo in grassetto */
 }
 
 .success-icon {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Dimensione del font per l'icona di successo */
 }
 
+/* Definizione dell'animazione di fade-in */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

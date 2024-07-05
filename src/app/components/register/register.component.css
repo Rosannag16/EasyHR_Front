@@ -1,27 +1,27 @@
 /* Stili specifici per il componente delle ferie */
 .table {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100%; /* Larghezza al 100% */
+  border-collapse: collapse; /* Collassa i bordi della tabella */
   background-color: #e0e0e0; /* Scurito il colore di sfondo */
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Angoli arrotondati */
+  overflow: hidden; /* Nascondi eventuali overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
 }
 
 .table td, .table th {
-  padding: 12px;
-  text-align: left;
-  vertical-align: middle;
+  padding: 12px; /* Spaziatura interna delle celle */
+  text-align: left; /* Allineamento del testo a sinistra */
+  vertical-align: middle; /* Allineamento verticale al centro */
   border-bottom: 1px solid #c0c0c0; /* Scurito il colore del bordo */
 }
 
 .table thead {
   background-color: #4a90c7; /* Scurito il colore di sfondo dell'intestazione */
-  color: #fff;
+  color: #fff; /* Colore del testo dell'intestazione */
 }
 
 .table tbody tr {
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; /* Transizione del colore di sfondo */
 }
 
 .table tbody tr:nth-child(even) {
@@ -35,56 +35,56 @@
 .btn-success, .btn-danger {
   background-color: #47a5cc; /* Scurito il colore di sfondo dei bottoni di successo e di errore */
   border-color: #47a5cc; /* Scurito il colore del bordo dei bottoni di successo e di errore */
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  color: #fff; /* Colore del testo */
+  padding: 6px 12px; /* Spaziatura interna */
+  border-radius: 4px; /* Angoli arrotondati */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* Transizioni */
 }
 
 .btn-success:hover, .btn-danger:hover {
   background-color: #2690b5; /* Scurito il colore di sfondo al passaggio del mouse dei bottoni di successo e di errore */
   border-color: #2690b5; /* Scurito il colore del bordo al passaggio del mouse dei bottoni di successo e di errore */
-  color: #fff;
+  color: #fff; /* Colore del testo */
 }
 
 .text-center {
-  text-align: center;
-  font-style: italic;
+  text-align: center; /* Allineamento al centro */
+  font-style: italic; /* Testo in corsivo */
   color: #7f8b8c; /* Scurito il colore del testo */
 }
 
 .card-header {
   background-color: #4393d0; /* Scurito il colore di sfondo dell'intestazione della carta */
-  color: black;
-  font-family: 'Roboto', sans-serif;
+  color: black; /* Colore del testo */
+  font-family: 'Roboto', sans-serif; /* Font */
 }
 
 .success-message {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 1rem; /* Margine superiore */
+  padding: 1rem; /* Spaziatura interna */
   background-color: #c5e7f1; /* Scurito il colore di sfondo del messaggio di successo */
   color: #0b5679; /* Scurito il colore del testo */
   border: 1px solid #a3d5eb; /* Scurito il colore del bordo */
-  border-radius: 0.25rem;
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  align-items: center;
-  animation: fadeIn 1s ease-in-out;
+  border-radius: 0.25rem; /* Angoli arrotondati */
+  font-family: 'Roboto', sans-serif; /* Font */
+  display: flex; /* Layout flessibile */
+  align-items: center; /* Allineamento degli elementi al centro */
+  animation: fadeIn 1s ease-in-out; /* Animazione di dissolvenza */
 }
 
 .success-message p {
-  margin: 0;
-  padding-left: 0.5rem;
-  font-weight: 700;
+  margin: 0; /* Margini a 0 */
+  padding-left: 0.5rem; /* Spaziatura interna sinistra */
+  font-weight: 700; /* Grassetto */
 }
 
 .success-icon {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Dimensione dell'icona */
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; } /* Opacità iniziale */
+  to { opacity: 1; } /* Opacità finale */
 }
 
 .navbar {
@@ -101,4 +101,3 @@
   background-color: #92b7d4 !important; /* Colore di sfondo durante l'hover */
   border-color: #1c4863; /* Cambia anche il colore del bordo se presente */
 }
-

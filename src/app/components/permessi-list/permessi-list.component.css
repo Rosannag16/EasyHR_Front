@@ -1,58 +1,58 @@
 /* Stili specifici per il componente delle ferie */
 .table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Imposta la larghezza della tabella al 100% del contenitore */
+  border-collapse: collapse; /* Rimuove gli spazi tra i bordi delle celle */
+  background-color: #f0f0f0; /* Colore di sfondo della tabella */
+  border-radius: 8px; /* Arrotonda gli angoli della tabella */
+  overflow: hidden; /* Nasconde gli elementi che eccedono i bordi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra alla tabella */
 }
 
 .table td, .table th {
-  padding: 12px;
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #dcdcdc;
+  padding: 12px; /* Aggiunge padding alle celle della tabella */
+  text-align: left; /* Allinea il testo a sinistra */
+  vertical-align: middle; /* Allinea verticalmente al centro */
+  border-bottom: 1px solid #dcdcdc; /* Aggiunge un bordo inferiore alle celle */
 }
 
 .table thead {
-  background-color: #6ab0de;
-  color: #fff;
+  background-color: #6ab0de; /* Colore di sfondo per l'intestazione della tabella */
+  color: #fff; /* Colore del testo dell'intestazione */
 }
 
 .table tbody tr {
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; /* Aggiunge una transizione al cambio di colore dello sfondo */
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #d1e8f5;
+  background-color: #d1e8f5; /* Colore di sfondo per le righe pari */
 }
 
 .table tbody tr:hover {
-  background-color: #b7d9eb;
+  background-color: #b7d9eb; /* Colore di sfondo al passaggio del mouse */
 }
 
 .btn-success, .btn-danger {
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  background-color: #5bc0de; /* Colore di sfondo dei pulsanti di successo e pericolo */
+  border-color: #5bc0de; /* Colore del bordo dei pulsanti */
+  color: #fff; /* Colore del testo dei pulsanti */
+  padding: 6px 12px; /* Padding interno dei pulsanti */
+  border-radius: 4px; /* Arrotonda gli angoli dei pulsanti */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* Aggiunge una transizione ai cambi di colore */
 }
 
 .btn-success:hover, .btn-danger:hover {
-  background-color: #2aabd2;
-  border-color: #2aabd2;
-  color: #fff;
+  background-color: #2aabd2; /* Colore di sfondo dei pulsanti al passaggio del mouse */
+  border-color: #2aabd2; /* Colore del bordo dei pulsanti al passaggio del mouse */
+  color: #fff; /* Colore del testo dei pulsanti al passaggio del mouse */
 }
 
 .text-center {
-  text-align: center;
-  font-style: italic;
-  color: #95a5a6;
+  text-align: center; /* Allinea il testo al centro */
+  font-style: italic; /* Imposta il testo in corsivo */
+  color: #95a5a6; /* Colore del testo */
 }
 
-.navbar{
-  background-color: #63afe2 !important;
+.navbar {
+  background-color: #63afe2 !important; /* Colore di sfondo della navbar */
 }
