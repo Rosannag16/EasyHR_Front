@@ -7,7 +7,7 @@ Questo progetto rappresenta il frontend di un'applicazione per la gestione delle
 - TypeScript
 - HTML/CSS
 - RxJS
-- Bootstrap (o un altro framework CSS)
+- Bootstrap 
 
 ## Prerequisiti
 - Node.js e npm (Node Package Manager)
@@ -54,6 +54,6 @@ Per testare l'applicazione, puoi utilizzare i seguenti account di prova:
   È l'admin a creare le credenziali per i dipendenti.
 
 ## Link Repository Backend
-Il repository del backend può essere trovato al seguente link: [EasyHR_Back Repository](https://github.com/yourusername/EasyHR_Back)
+Il repository del backend può essere trovato al seguente link: [EasyHR_Back Repository](https://github.com/Rosannag16/EasyHR_Back)
 
 Per ulteriori dettagli sugli endpoint disponibili e sugli schemi delle richieste e delle risposte del backend, consulta la [documentazione API su Postman](https://documenter.getpostman.com/view/33267926/2sA3dyhApC).
